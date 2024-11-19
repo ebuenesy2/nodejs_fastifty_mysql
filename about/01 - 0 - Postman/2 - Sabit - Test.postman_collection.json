@@ -1,0 +1,433 @@
+{
+	"info": {
+		"_postman_id": "9d0aa0ec-c12b-4e55-8916-c92a37f4fc8e",
+		"name": "2 - Sabit - Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23460183"
+	},
+	"item": [
+		{
+			"name": "Test",
+			"item": [
+				{
+					"name": "Test - Tüm Veriler",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/test/all",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"test",
+								"all"
+							]
+						},
+						"description": "{{url}}/api/ssk/all"
+					},
+					"response": []
+				},
+				{
+					"name": "Test - Tüm Veriler - Params",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/test/all?page=2&rowcount=4&order=asc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"test",
+								"all"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "rowcount",
+									"value": "4"
+								},
+								{
+									"key": "order",
+									"value": "asc"
+								}
+							]
+						},
+						"description": "{{url}}/api/ssk/all"
+					},
+					"response": []
+				},
+				{
+					"name": "Test - Tüm Veriler - Params 2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/test/all?order=asc&ValueTop=15",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"test",
+								"all"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "asc"
+								},
+								{
+									"key": "ValueTop",
+									"value": "15"
+								}
+							]
+						},
+						"description": "{{url}}/api/ssk/all"
+					},
+					"response": []
+				},
+				{
+					"name": "Test  - Arama",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/test/find/33",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"test",
+								"find",
+								"33"
+							]
+						},
+						"description": "{{url}}/api/ssk/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Test   - Arama - Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":68\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/test/find_post",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"test",
+								"find_post"
+							]
+						},
+						"description": "{{url}}/api/ssk/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Test  - Arama - Kullanıcı",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"created_byId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/test/find_user?page=1&rowcount=4&order=asc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"test",
+								"find_user"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "rowcount",
+									"value": "4"
+								},
+								{
+									"key": "order",
+									"value": "asc"
+								}
+							]
+						},
+						"description": "{{url}}/api/ssk/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Test  - Arama - Farklı",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"created_byId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/test/find_other?page=1&rowcount=4&order=asc",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"test",
+								"find_other"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "rowcount",
+									"value": "4"
+								},
+								{
+									"key": "order",
+									"value": "asc"
+								}
+							]
+						},
+						"description": "{{url}}/api/ssk/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Test - Veri Ekleme",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"name add\",\r\n    \"surname\":\"surname add\",\r\n    \"email\": \"email add\",\r\n    \"value\": null,\r\n    \"img_url\": null,\r\n    \"created_byId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/test/add",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"test",
+								"add"
+							]
+						},
+						"description": "{{url}}/api/ssk/add"
+					},
+					"response": []
+				},
+				{
+					"name": "Test  - Veri Güncelleme",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"id\":67,\r\n    \"name\":\"name güncelleme\",\r\n    \"surname\":\"surname güncelleme\",\r\n    \"updated_byId\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/test/edit",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"test",
+								"edit"
+							]
+						},
+						"description": "{{url}}/api/ssk/update"
+					},
+					"response": []
+				},
+				{
+					"name": "Test - Çoklu Veri Güncelle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "yildirimdev01",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ids\": \"98,34\",\r\n    \"name\":\"name güncelleme\",\r\n    \"surname\":\"surname güncelleme\",\r\n    \"updated_byId\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/test/edit/multi",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"test",
+								"edit",
+								"multi"
+							]
+						},
+						"description": "{{url}}/api/ssk/delete"
+					},
+					"response": []
+				},
+				{
+					"name": "Test- Veri Silme",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"deleted_byId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/test/delete/68",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"test",
+								"delete",
+								"68"
+							]
+						},
+						"description": "{{url}}/api/ssk/delete"
+					},
+					"response": []
+				},
+				{
+					"name": "Test - Çoklu Veri Silme",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "yildirimdev01",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ids\": \"68,67\",\r\n    \"deleted_byId\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/test/delete/multi",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"test",
+								"delete",
+								"multi"
+							]
+						},
+						"description": "{{url}}/api/ssk/delete"
+					},
+					"response": []
+				},
+				{
+					"name": "Test - Geçisi Silme",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ids\":\"33\",\r\n    \"deleted_byId\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/test/delete/edit",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"test",
+								"delete",
+								"edit"
+							]
+						},
+						"description": "{{url}}/api/ssk/delete"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

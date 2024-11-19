@@ -1,0 +1,328 @@
+{
+	"info": {
+		"_postman_id": "595a4907-be73-4654-abb0-18b89cc612f8",
+		"name": "1 - Sabit - Proje",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23460183"
+	},
+	"item": [
+		{
+			"name": "Anasayfa",
+			"item": [
+				{
+					"name": "Anasayfa - Get - 3002",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3002",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3002"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Anasayfa - Get - Ortak",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						},
+						"description": "http://localhost:3000/"
+					},
+					"response": []
+				},
+				{
+					"name": "URL Veri Alma",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/getId/8989/getPage/34",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"getId",
+								"8989",
+								"getPage",
+								"34"
+							]
+						},
+						"description": "{{url}}/info"
+					},
+					"response": []
+				},
+				{
+					"name": "Params",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/params?id=4&token=sdfa3&geo=us",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"params"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								},
+								{
+									"key": "token",
+									"value": "sdfa3"
+								},
+								{
+									"key": "geo",
+									"value": "us"
+								}
+							]
+						},
+						"description": "http://localhost:3000/env"
+					},
+					"response": []
+				},
+				{
+					"name": "Env",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/env",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"env"
+							]
+						},
+						"description": "http://localhost:3000/env"
+					},
+					"response": []
+				},
+				{
+					"name": "Version",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/version",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"version"
+							]
+						},
+						"description": "{{url}}/version"
+					},
+					"response": []
+				},
+				{
+					"name": "Proje - Bilgileri",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/info",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"info"
+							]
+						},
+						"description": "{{url}}/info"
+					},
+					"response": []
+				},
+				{
+					"name": "Html",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/html",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"html"
+							]
+						},
+						"description": "{{url}}/info"
+					},
+					"response": []
+				},
+				{
+					"name": "Anasayfa - Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"enes\",\r\n    \"surname\":\"yildirim\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}",
+							"host": [
+								"{{url}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Token",
+			"item": [
+				{
+					"name": "Token Oluşturma",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":11214,\n    \"name\":\"enes\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/token_create",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"token_create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Token Çözme",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTEyMTQsIm5hbWUiOiJlbmVzIn0.oXEFa3cmRmkj9WzzqdCLDBSbwp7KgqaMlztkF32uzUs\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/token_decode",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"token_decode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Bearer Token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "abcToken",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"enes\",\n    \"surname\":\"yildirim\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/bearer_token",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"bearer_token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Api",
+			"item": [
+				{
+					"name": "Service - Get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/service/get",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"service",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Service - Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/service/post",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"service",
+								"post"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
